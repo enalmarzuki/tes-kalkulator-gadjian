@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- ... -->
+  <title>Simple Calculator</title>
+</head>
+
+<body>
+  <div class="bg-white md:bg-gray-100 h-screen flex justify-center items-center p-4">
+    <div class="bg-white md:h-screen flex flex-col justify-center md:relative md:p-6 md:overflow-hidden">
+      <p
+        class="capitalize text-center mb-6 font-medium text-2xl md:text-xl fixed md:absolute top-0 left-0 right-0 text-white p-4 md:py-3 shadow-md bg-green-300">
+        simple calculator</p>
+
+      <!-- START : Input Pertama -->
+      <div>
+        <label for="firstNumber" class="font-medium text-sm text-gray-700">Angka Pertama <span
+            class="text-red-500">*</span></label>
+        <input type="number" name="firstNumber" id="firstNumber" placeholder="Masukkan Angka"
+          class="w-full py-2 px-3 focus:outline-none focus:border-green-200 focus:ring focus:ring-green-300 focus:ring-opacity-30 rounded-sm transition-all duration-200 shadow-sm mt-2 text-right border">
+      </div>
+      <!-- END : Input Pertama -->
+
+      <!-- START : Input Kedua -->
+      <div class="mt-5">
+        <label for="lastNumber" class="font-medium text-sm text-gray-700">Angka Kedua <span
+            class="text-red-500">*</span></label>
+        <input type="number" name="lastNumber" id="lastNumber" placeholder="Masukkan Angka"
+          class="w-full py-2 px-3 focus:outline-none focus:border-green-200 focus:ring focus:ring-green-300 focus:ring-opacity-30 rounded-sm transition-all duration-200 shadow-sm mt-2 text-right border">
+      </div>
+      <!-- END : Input Kedua -->
+
+      <!-- START : Operator -->
+      <div class="mt-5">
+        <div class="flex items-center justify-between">
+
+          <!-- START : Button Tambah -->
+          <button id="btn-operator" title="tambah"
+            class="text-xl font-bold bg-green-300 text-white text-center p-2 flex justify-center flex-1 mr-2">
+            +
+          </button>
+          <!-- END : Button Tambah -->
+
+          <!-- START : Button Kurang -->
+          <button id="btn-operator" title="kurang"
+            class="text-xl font-bold bg-green-300 text-white text-center p-2 flex justify-center flex-1 mr-2">
+            -
+          </button>
+          <!-- END : Button Kurang -->
+
+          <!-- START : Button Kali -->
+          <button id="btn-operator" title="kali"
+            class="text-xl font-bold bg-green-300 text-white text-center p-2 flex justify-center flex-1 mr-2">
+            x
+          </button>
+          <!-- END : Button Kali -->
+
+          <!-- START : Button Bagi -->
+          <button id="btn-bagi" class="text-xl font-bold bg-green-300 text-white p-2 flex justify-center flex-1">
+            :
+          </button>
+          <!-- END : Button Bagi -->
+
+        </div>
+
+        <!-- START : Hasil -->
+        <div class="mt-5 flex flex-col items-center  justify-center">
+          <p class="text-xl font-medium w-max">Total </p>
+          <p class="total text-3xl font-medium w-max">0</p>
+        </div>
+        <!-- END : Hasil -->
+      </div>
+      <!-- END : Operator -->
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+
+    <script src="script.js"></script>
+  </div>
+</body>
+
+</html>
